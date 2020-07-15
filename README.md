@@ -1,0 +1,1 @@
+The project is an implementation of the BB84 Protocol.
