@@ -1,6 +1,6 @@
-\documentclass[10 pt]{beamer}
+\documentclass{beamer}
 
-\usetheme{metropolis}
+\usetheme{EastLansing}
 
 \title[BB84]{BB84}
 \subtitle{A Quantum Key Distribution Protocol}
@@ -46,7 +46,7 @@
 \end{frame}
 
 \begin{frame}{Description}
-    \begin{itemize}
+    \begin{itemize}[<+->]
         \item A QKD protocol that provides a way to share an unconditionally secure key in the presence of an eavesdropper.\\
         \item We require two different communication channels : \\
             \textbf{Quantum Communication Channel} \\
@@ -64,9 +64,9 @@
 
 \begin{frame}{BB84 Protocol}
     \begin{itemize}[<+->]
-        \item Alice and Bob prepare pseudo keys using QAC and CAC
-        \item Information Reconciliation to improvise the noisy version of Bob's key
-        \item Privacy Amplification to reduce Eve's information of the key
+        \item Production of pseudo keys using QCC and CAC
+        \item Information Reconciliation - exchange error-correcting information to improvise Bob;s noisy version of key
+        \item Privacy Amplification -  production of final key secure from adversary  
     \end{itemize}
 \end{frame}
 
