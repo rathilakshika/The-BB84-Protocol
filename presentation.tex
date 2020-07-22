@@ -1,4 +1,5 @@
-\documentclass[14 pt]{beamer}
+\documentclass[11 pt]{beamer}
+
 \usetheme{metropolis}
 
 
@@ -21,7 +22,7 @@
 \end{frame}
 
 
-\begin{frame}{It's Quantum all the way down!}
+\begin{frame}[standout]
     \begin{center}
         \emph{Nature isn’t classical, dammit, and if you want to make a simulation of nature, you’d better make it quantum mechanical...}
     \end{center}
@@ -34,7 +35,7 @@
 \begin{frame}{Technology Stack}
 	\begin{itemize}
 		\item Qiskit - An SDK for Quantum Computing
-		\item IBM Q - IBM Quantum Experience that allows to access their quantum computers via the cloud
+		\item IBM Q - IBM Quantum Experience to access their quantum computers via the cloud
 	\end{itemize}
 \end{frame}
 
@@ -42,25 +43,47 @@
     \begin{itemize}[<+->] 
         \item Keys lock up and secure your things
         \item We need cryptographic protocols...
-        \item BB84 is the first quantum cryptographic protocol
+        \item BB84 is the first Quantum Key Distribution protocol
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Description}
+    A QKD protocol that provides a way to share an unconditionally secure key in the presence of an eavesdropper.\\
+    For this protocol we require two communication channels : 
+    \begin{itemize}[<+->]
+        \item QAC - 
+        \item CAC - 
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{BB84 Protocol}
+    \begin{itemize}[<+->]
+        \item Alice and Bob prepare pseudo keys using QAC and CAC
+        \item Information Reconciliation to improvise the noisy version of Bob's key
+        \item Privacy Amplification to reduce Eve's information of the key
     \end{itemize}
 \end{frame}
 
 
-\begin{frame}{Status}
-	\begin{itemize}
-		\item Explored the domain of Quantum Computing
-        \item Learnt the basics of Quantum Cryptography
-        \item Understood the BB84 protocol
-        \item Started learning Qiskit
-	\end{itemize}
+\begin{frame}{Timeline}
+        \begin{tabular}{c c}
+            23rd - 24th June & Decided on the domain and collected resources\\
+            25th - 30th June & Audited the course "Quantum Mechanics and Quantum Computation"\\
+            1st - 7th July & Read the book "Dancing with Qubits" and decided on Cryptography\\
+            8th - 14th July & Audited the course "Quantum Cryptography" and chose "BB84 Implementation"\\
+            15th - 16th July & Read the notes on Cryptography and collected resources\\
+            17th - 18th July & Completed the first stage of the Protocol\\
+            19th - 22nd July & Looked upon research papers\\
+            23rd - 26th July & Complete the code\\
+            27th - 31st July & Test and debug the code\\
+        \end{tabular}
 \end{frame}
 
 \begin{frame}{Difficulties faced}
 	\begin{itemize}
 		\item Getting started with Quantum Computing
         \item In choosing a sub-domain
-        \item Were unsure about the language and tools to use
+        \item Unsure about the language and tools to use
 	\end{itemize}
 \end{frame}
 		
