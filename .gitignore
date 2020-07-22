@@ -7,3 +7,4 @@ notes.txt
 *.pdf
 *.snm
 *.toc
+.ipynb_checkpoints
