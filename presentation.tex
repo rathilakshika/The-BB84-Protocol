@@ -33,7 +33,7 @@
 \begin{frame}{Technology Stack}
 	\begin{itemize}
 		\item Qiskit - An SDK for Quantum Computing
-		\item IBM Q - IBM Quantum Experience to access their quantum computers via the cloud
+		\item IBM Q - IBM Quantum Experience to access IBM's quantum computers via the cloud
 	\end{itemize}
 \end{frame}
 
@@ -46,11 +46,19 @@
 \end{frame}
 
 \begin{frame}{Description}
-    A QKD protocol that provides a way to share an unconditionally secure key in the presence of an eavesdropper.\\
-    For this protocol we require two communication channels : 
-    \begin{itemize}[<+->]
-        \item Quantum Channel 
-        \item Classical Authenticated Channel
+    \begin{itemize}
+        \item A QKD protocol that provides a way to share an unconditionally secure key in the presence of an eavesdropper.\\
+        \item We require two different communication channels : \\
+            \textbf{Quantum Communication Channel} \\
+            \begin{itemize}
+                \item Transfer of quantum information
+                \item Adversary has full access i.e. can intercept, alter, store and resend
+            \end{itemize}
+            \textbf{Classical Authenticated Channel} \\
+            \begin{itemize}
+                \item Unaltered message guaranteed
+                \item Adversary can read all the messages
+            \end{itemize}
     \end{itemize}
 \end{frame}
 
