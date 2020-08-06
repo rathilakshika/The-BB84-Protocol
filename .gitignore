@@ -8,3 +8,4 @@ notes.txt
 *.snm
 *.toc
 .ipynb_checkpoints
+*jpg
