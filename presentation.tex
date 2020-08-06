@@ -1,5 +1,5 @@
 \documentclass{beamer}
-
+\usepackage{graphicx}
 \usetheme{metropolis}
 
 \title[BB84]{BB84}
@@ -21,12 +21,16 @@
 
 
 \begin{frame}[standout]
-    \begin{center}
-        \emph{Nature isn’t classical, dammit, and if you want to make a simulation of nature, you’d better make it quantum mechanical...}
-    \end{center}
-    \begin{flushright}
-        - Richard Feynman
-    \end{flushright}
+    \begin{columns}
+        \column{0.38\linewidth}
+            \centering
+            \includegraphics{feynman.jpg}
+        \column{0.58\linewidth}
+            \emph{Nature isn’t classical, dammit, and if you want to make a simulation of nature, you’d better make it quantum mechanical...}
+        \begin{flushright}
+            - Richard Feynman
+        \end{flushright}
+    \end{columns}
 \end{frame}
 
 
@@ -37,10 +41,12 @@
 	\end{itemize}
 \end{frame}
 
-\begin{frame}{Description}
+
+\begin{frame}{Quantum Key Distribution}
     \begin{itemize}[<+->] 
-        \item Keys lock up and secure your things
-        \item We need cryptographic protocols...
+        \item Cryptographic protocols are used for secure communication
+        \item The parties involved require a common key for these protcols
+        
         \item BB84 is the first Quantum Key Distribution protocol
     \end{itemize}
 \end{frame}
