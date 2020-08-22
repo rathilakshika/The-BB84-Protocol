@@ -7,6 +7,28 @@
 \author[Team 37]{Lakshika, Shreya}
 \date{July 2020}
 
+\makeatletter
+\defbeamertemplate*{frametitle}{myframetitle}{%
+    \nointerlineskip
+    \begin{beamercolorbox}[%
+        wd=\paperwidth,%
+        sep=0pt,%
+        leftskip=\metropolis@frametitle@padding,
+        rightskip=\metropolis@frametitle@padding,
+        ]{frametitle}%
+        \metropolis@frametitlestrut@start
+        \quad\insertframetitle%%%%%%%%%%%%%%%%%%%%%%
+        \nolinebreak
+        \metropolis@frametitlestrut@end
+    \end{beamercolorbox}\par
+    \usebeamerfont{framesubtitle}%
+    \usebeamercolor[fg]{framesubtitle}%
+    \vskip3pt
+    \hspace*{-2.5\metropolis@frametitle@padding}%
+    \insertframesubtitle
+}
+%\makeatother
+%\setbeamertemplate{frametitle}[myframetitle]
 
 \begin{document}
 
@@ -38,57 +60,65 @@
 	\begin{itemize}
 		\item Qiskit - An SDK for Quantum Computing
 		\item IBM Q - IBM Quantum Experience to access IBM's quantum computers via the cloud
+        \item Python Libraries
 	\end{itemize}
 \end{frame}
 
 
 \begin{frame}{Quantum Key Distribution}
-    \begin{itemize}[<+->] 
-        \item Cryptographic protocols are used for secure communication
-        \item The parties involved require a common key for these protcols
-        
-        \item BB84 is the first Quantum Key Distribution protocol
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{Description}
-    \begin{itemize}
-        \item A QKD protocol that provides a way to share an unconditionally secure key in the presence of an eavesdropper.\\
-        \item We require two different communication channels : \\
-            \textbf{Quantum Communication Channel} \\
-            \begin{itemize}
-                \item Transfer of quantum information
-                \item Adversary has full access i.e. can intercept, alter, store and resend
-            \end{itemize}
-            \textbf{Classical Authenticated Channel} \\
-            \begin{itemize}
-                \item Unaltered message guaranteed
-                \item Adversary can read all the messages
-            \end{itemize}
-    \end{itemize}
-\end{frame}
-
-\begin{frame}{BB84 Protocol}
     \begin{itemize}[<+->]
-        \item \textbf{Pseudo key production} -  using QCC and CAC
-        \item \textbf{Information Reconciliation} - exchange error-correcting information to improvise receiver's noisy version of key
-        \item \textbf{Privacy Amplification} -  production of final secure key 
+        \item Key distribution is an important step in Cryptographic protocols
+        \item Current protocols assume computational limitations
+        \item \begin{itemize}
+                \item Quantum Cryptography
+                \item Post-Quantum Cryptography
+              \end{itemize}
+        \item The first QKD protocol by Bennet and Brassard in 1984
+     \end{itemize}
+\end{frame}
+
+
+\begin{frame}{The Quantum World}
+    \begin{itemize}[<+->]
+        \item \textbf{Qubit} - Basic unit of Quantum Information
+        \item Bases and Measurement
+        \item Communication channels
+            \begin{itemize}
+                \item A one-way physical Quantum channel
+                \item An authenticated two-way classical ideal channel
+              \end{itemize}
     \end{itemize}
 \end{frame}
 
 
-\begin{frame}{Timeline}
-    \begin{tabular}{ll}
-            23rd - 24th June & Domain selection and resources collection\\
-            25th - 30th June & Audited a course on Quantum Computing\\
-            1st - 7th July & Read \emph{Dancing with Qubits}, chose Cryptography\\
-            8th - 14th July & Audited course on Quantum Cryptography, chose BB84\\
-            15th - 16th July & Read more notes and collected resources for BB84\\
-            17th - 18th July & Implemented the 1st stage of the Protocol\\
-            19th - 22nd July & Looked upon research papers\\
-            23rd - 26th July & Complete the code\\
-            27th - 31st July & Test and debug the code\\
-     \end{tabular}
+\begin{frame}{The BB84 Protocol}
+	\framesubtitle{Quantum Phase}
+    \begin{itemize}[<+->]
+        \item Generation of a random bitstring and bases 
+		\item Quantum transmission of encoded bits
+		\item Measurement by the receiver
+		\item Public comparison of bases and sifting
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{The BB84 Protocol}
+	\framesubtitle{Information Reconciliation}
+	The process of cleaning the keys from errors
+	\begin{itemize}[<+->]
+		\item Error estimation
+		\item Low Density Parity Check codes based reconciliation
+	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{The BB84 Protocol}
+	\framesubtitle{Privacy Amplification}
+	\begin{itemize}[<+->]
+	    \item Distillation of a highly secret key from a partially secure string by public discussion
+		\item Shrinks the possible exposed information over the communication channels to almost zero
+		\item 2-Universal hash functions are used
+	\end{itemize}
 \end{frame}
 
 \begin{frame}{Difficulties faced}
@@ -96,7 +126,19 @@
 		\item Getting started with Quantum Computing
         \item In choosing a sub-domain
         \item Unsure about the language and tools to use
+		\item Figuring out Information Reconciliation part
 	\end{itemize}
 \end{frame}
-		
+
+
+\begin{frame}{Learnings}
+	\begin{itemize}
+		\item Explored the domain of Quantum Computing
+		\item Learnt the basics of Quantum Cryptography
+		\item Collecting, reading research papers and trying to understand them
+		\item Got introduced to Coding theory
+	\end{itemize}
+\end{frame}
+
+
 \end{document}
