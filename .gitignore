@@ -9,3 +9,4 @@ notes.txt
 *.toc
 .ipynb_checkpoints
 *jpg
+*png
