@@ -1,15 +1,28 @@
 \documentclass{beamer}
+
 \usepackage{graphicx}
 \usetheme{metropolis}
 \usepackage[latin1]{inputenc}
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows}
 
+\metroset{progressbar=frametitle}
+\metroset{background=dark}
+
+\setbeamercolor{palette primary}{bg=black, fg=white}
+\setbeamercolor{background canvas}{parent=palette primary}
+\setbeamercolor{normal text}{fg=white}
+\setbeamercolor{progress bar}{use=palette primary, fg=red}
+
+\makeatletter
+\setlength{\metropolis@progressinheadfoot@linewidth}{4pt}
+\setlength{\metropolis@titleseparator@linewidth}{4pt}
+\makeatother
+
 \title[BB84]{BB84}
 \subtitle{A Quantum Key Distribution Protocol}
 \author[Team 37]{Lakshika, Shreya}
 \date{July 2020}
-
 
 \begin{document}
 
@@ -109,7 +122,7 @@
 % Define block styles
     \tikzstyle{decision} = [diamond, draw]
     %text width=7em, text badly centered, node distance=3cm, inner sep=0pt]i
-    \tikzstyle{block} = [rectangle, draw, fill=yellow!20]
+    \tikzstyle{block} = [rectangle, draw, fill=red]
     %text width=10em, text centered, rounded corners, minimum height=2em]
     \tikzstyle{block2} = [rectangle, draw, rounded corners, node distance=6cm]
     \tikzstyle{block3} = [rectangle, draw, rounded corners, node distance=1.5cm]
