@@ -1,6 +1,9 @@
 \documentclass{beamer}
 \usepackage{graphicx}
 \usetheme{metropolis}
+\usepackage[latin1]{inputenc}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
 
 \title[BB84]{BB84}
 \subtitle{A Quantum Key Distribution Protocol}
@@ -99,6 +102,43 @@
 		\item Shrinks the possible exposed information over the communication channels to almost zero
 		\item 2-Universal hash functions are used
 	\end{itemize}
+\end{frame}
+
+
+\begin{frame}{The Protocol at a glance !}
+% Define block styles
+    \tikzstyle{decision} = [diamond, draw]
+    %text width=7em, text badly centered, node distance=3cm, inner sep=0pt]i
+    \tikzstyle{block} = [rectangle, draw, fill=yellow!20]
+    %text width=10em, text centered, rounded corners, minimum height=2em]
+    \tikzstyle{block2} = [rectangle, draw, rounded corners, node distance=6cm]
+    \tikzstyle{block3} = [rectangle, draw, rounded corners, node distance=1.5cm]
+\tikzstyle{line} = [draw, -latex']
+    \tikzstyle{cloud} = [draw, ellipse, node distance=7cm, text width=11em]
+    %minimum height=1em]
+    \tikzstyle{cloud1} = [draw, ellipse, node distance=1.5cm]
+    
+\begin{tikzpicture}[node distance = 1.5cm, auto]
+    % Place nodes
+    \node [block] (QT) {Quantum Transmission};
+    \node [block, below of=QT] (PC) {Public Comparison};
+    \node [block, below of=PC] (CPE) {Channel parameter estimation};
+    \node [block3, below of=CPE] (QBER) {QBER to validate secret};
+    \node [block, below of=QBER] (R) {Information Reconciliation};
+    \node [block, below of=R] (A) {Privacy Amplification};
+    \node [block2, right of=QT] (keys) {Alice's key, Bob's key};
+    \node [block2, right of=PC] (sift) {Sifted keys of Alice and Bob};
+    \node [block2, right of=QBER] (exit) {Exit protocol \\ (QBER > Threshold)};
+
+    \path [line] (QT) -- (PC);
+    \path [line] (QT) -- (keys);
+    \path [line] (PC) -- (CPE);
+    \path [line] (PC) -- (sift);
+    \path [line] (CPE) -- (QBER);
+    \path [line] (QBER) -- (exit);
+    \path [line] (QBER) -- (R);
+    \path [line] (R) -- (A);
+\end{tikzpicture}
 \end{frame}
 
 
