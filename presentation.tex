@@ -123,16 +123,16 @@
 % Define block styles
     \tikzstyle{decision} = [diamond, draw]
     %text width=7em, text badly centered, node distance=3cm, inner sep=0pt]i
-    \tikzstyle{block} = [rectangle, draw, fill=red]
+    \tikzstyle{block} = [rectangle, draw, fill=orange]
     %text width=10em, text centered, rounded corners, minimum height=2em]
     \tikzstyle{block2} = [rectangle, draw, rounded corners, node distance=6cm]
-    \tikzstyle{block3} = [rectangle, draw, rounded corners, node distance=1.5cm]
+    \tikzstyle{block3} = [rectangle, draw, rounded corners, node distance=1.25cm]
 \tikzstyle{line} = [draw, -latex']
     \tikzstyle{cloud} = [draw, ellipse, node distance=7cm, text width=11em]
     %minimum height=1em]
     \tikzstyle{cloud1} = [draw, ellipse, node distance=1.5cm]
     
-\begin{tikzpicture}[node distance = 1.5cm, auto]
+\begin{tikzpicture}[node distance = 1.25cm, auto]
     % Place nodes
     \node [block] (QT) {Quantum Transmission};
     \node [block, below of=QT] (PC) {Public Comparison};
