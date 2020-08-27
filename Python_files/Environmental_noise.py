@@ -2,8 +2,8 @@ from qiskit import *
 from numpy.random import randint, shuffle
 from qiskit.visualization import plot_histogram, plot_bloch_multivector
 import numpy as np
-get_ipython().run_line_magic('run', '../Functions/BB84_functions.ipynb')
-get_ipython().run_line_magic('run', '../Functions/LDPC_functionsMD.ipynb')
+from BB84_functions import *
+from LDPC_functions import *
 
 
 n, N =1000, 4200
