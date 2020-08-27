@@ -2,13 +2,10 @@ from qiskit import *
 from numpy.random import randint, shuffle
 from qiskit.visualization import plot_histogram, plot_bloch_multivector
 import numpy as np
-get_ipython().run_line_magic('run', '../Functions/BB84_functions.ipynb')
+from BB84_functions import *
 
-
-n = 1000
-N = 4200
+n, N = 1000, 4200
 EMPTY = QuantumCircuit(N, N)
-
 
 def QCC(qubits) :
     return qubits
