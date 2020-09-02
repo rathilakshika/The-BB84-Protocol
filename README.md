@@ -30,5 +30,4 @@ Each scenario in the folder can be executed given the "Functions" directory whic
 
 ### **Team Members**
 
-Lakshika Rathi, IIT Delhi 
-Shreya Ilindra, IIT Bombay
+Lakshika Rathi, IIT Delhi & Shreya Ilindra, IIT Bombay
