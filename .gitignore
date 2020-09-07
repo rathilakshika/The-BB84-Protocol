@@ -8,7 +8,4 @@ notes.txt
 *.snm
 *.toc
 .ipynb_checkpoints
-*jpg
-*png
 .Ds_Store
-*jpeg
